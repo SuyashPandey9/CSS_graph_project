@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "u1",
+      "text": "Solar energy basics",
+      "metadata": {}
+    },
+    {
+      "id": "u2",
+      "text": "Wind energy basics",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "u1",
+      "target": "u2",
+      "relation": "related_to",
+      "weight": 1.0
+    }
+  ]
+}

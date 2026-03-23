@@ -1,0 +1,36 @@
+# V3 configuration file (edit model/provider here to switch without code changes).
+
+# LLM provider: 'openai' or 'gemini'
+llm_provider: openai
+
+# OpenAI model (used when llm_provider is 'openai')
+openai_model: gpt-4o-mini
+
+# Gemini model (used when llm_provider is 'gemini')
+primary_llm_model: gemini-2.0-flash
+
+# ──────────────────────────────────────────────
+# Domain-Specific Configuration (Batch 4)
+# ──────────────────────────────────────────────
+
+domain: legal  # Active domain profile
+
+# Legal domain overrides
+legal:
+  # CSS weight overrides (applied on top of default WEIGHTS)
+  css_weights:
+    context_cohesion: 0.5       # Fix 2.4: Reduced — multi-hop legal queries need diverse, low-cohesion graphs
+    clause_coverage: 1.0        # Fix 2.1: Legal addon
+    section_diversity: 1.0      # Fix 2.2: Legal addon
+    answer_specificity: 2.0     # Fix 2.3: Legal addon — rewards numbers, dates, dollar amounts
+  
+  # Token budget (Fix 2.5)
+  token_budget: 2000
+  
+  # Redundancy threshold (Fix 2.6)
+  redundancy_threshold: 0.95    # Relaxed from 0.9 — legal provisions may have intentional repetition
+  
+  # Edge building tweaks
+  edge_params:
+    adjacency_same_section_bonus: 1.0   # Fix 2.8: Full bonus within same section
+    adjacency_cross_section_factor: 0.5 # Fix 2.8: Reduced bonus across sections

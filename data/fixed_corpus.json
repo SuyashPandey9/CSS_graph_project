@@ -1,0 +1,34 @@
+{
+  "documents": [
+    {
+      "id": "doc_1",
+      "title": "Solar Energy Basics",
+      "text": "Solar energy is power from the sun converted into electricity or heat using photovoltaic panels or solar thermal systems.",
+      "source": "Renewable Energy Basics"
+    },
+    {
+      "id": "doc_2",
+      "title": "Wind Energy Basics",
+      "text": "Wind energy uses turbines to convert the kinetic energy of moving air into electrical energy, often grouped in wind farms.",
+      "source": "Renewable Energy Basics"
+    },
+    {
+      "id": "doc_3",
+      "title": "Hydropower Basics",
+      "text": "Hydropower generates electricity by directing flowing water through turbines, typically at dams or run-of-river sites.",
+      "source": "Renewable Energy Basics"
+    },
+    {
+      "id": "doc_4",
+      "title": "Geothermal Energy Basics",
+      "text": "Geothermal energy taps heat from the Earth's interior to produce electricity or provide direct heating.",
+      "source": "Renewable Energy Basics"
+    },
+    {
+      "id": "doc_5",
+      "title": "Biomass Energy Basics",
+      "text": "Biomass energy comes from organic materials like wood or agricultural waste and can be burned or converted into fuels.",
+      "source": "Renewable Energy Basics"
+    }
+  ]
+}

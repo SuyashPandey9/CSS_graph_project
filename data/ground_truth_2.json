@@ -1,0 +1,892 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Ground truth batch 2 - 48 queries from full 510-contract CUAD dataset.",
+  "_trap_types": {
+    "trap_a": "Invisible Exception",
+    "trap_b": "Distant Definition",
+    "trap_c": "Scattered Components"
+  },
+  "_source": "Full CUAD dataset - batch 2 (different contracts from ground_truth.json)",
+  "annotations": [
+    {
+      "id": "glumobileinc_a_01_2",
+      "contract_file": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, Notwithstanding the foregoing, Licensee shall remain the primary contact under this Agreement and shall remain liable for all obligations performed by a sublicensee....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "ofgbancorp_0_a_02_2",
+      "contract_file": "OFGBANCORP_03_28_2007-EX-10.23-OUTSOURCING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, provide all or any portion of the Services thereafter on a month-to-month basis subject to these Terms and Conditions and Metavante's then-current standard fees and charges....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "niceltd_06_2_a_03_2",
+      "contract_file": "NICELTD_06_26_2003-EX-4.5-OUTSOURCING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, ng all relevant components to Contractor from           Contractor's suppliers, subject to the Liability....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "phreesia_inc_a_04_2",
+      "contract_file": "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, The Merchant Processing Services are subject to the terms and conditions of the Merchant Agreement, the Operating Regulations and applicable Law....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "xencorinc_10_a_05_2",
+      "contract_file": "XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, 5, or (ii) except as provided in clause (i), the Specifications accompanied by a Confirmation of Compliance and Certificate of Analysis....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "atninternati_a_06_2",
+      "contract_file": "AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement.txt",
+      "query": "What are the key obligations or exceptions in the Section 3 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 3, ce Majeure Event affecting Vendor's performance with respect to such Cell Site, subject to Section 3....",
+      "relevant_sections": [
+        "Section 3"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "cardlyticsin_a_07_2",
+      "contract_file": "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance Agreement1.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, listed on a Customization Schedule, which shall be owned by Bank of America and subject to the Marketing Restrictions outlined in the Section entitled \"Customizations....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "playboyenter_a_08_2",
+      "contract_file": "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content License Agreement_ Marketing Agreement_ Sales-Purchase Agreement1.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, out limitation, all warehouse  and inventory maintenance and control; and (vii) except as otherwise set forth in this Agreement, handling all advertising,  promotion and marketing relating to the Playboy Commerce Business....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "vaxcyte_inc__a_09_2",
+      "contract_file": "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, utroVax, the Extracts and Custom Reagents (as defined below) upon the terms and subject to the conditions set forth herein....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "changepointc_a_10_2",
+      "contract_file": "CHANGEPOINTCORP_03_08_2000-EX-10.6-LICENSE AND HOSTING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, not authorize Customers to          download or reproduce the Software for use except as necessary in          connection with the Corio Services....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "zebratechnol_a_11_2",
+      "contract_file": "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, (lll) \"Open Source Software\" means any Software that is subject to any license that is, or is substantially similar to, a license approved by the Open Source Initiative and listed   8      at http://www....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "tomonlineinc_a_12_2",
+      "contract_file": "TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, nd/or branding licensed from third parties) in a specified Look and Feel format subject to the Skype Policies....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "fidelitynati_a_13_2",
+      "contract_file": "FIDELITYNATIONALINFORMATIONSERVICES,INC_08_05_2009-EX-10.3-INTELLECTUAL PROPERTY AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, ssumed or otherwise transferred to the entity(ies) specified in this Agreement, subject to the consent of the applicable Third Party Provider (defined below)....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "bluerockresi_a_14_2",
+      "contract_file": "BLUEROCKRESIDENTIALGROWTHREIT,INC_06_01_2016-EX-1.1-AGENCY AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, ies, in each case free and clear of any lien, encumbrance or security interest, except as described in the Registration Statement, the General Disclosure Package and the Prospectus, subject only to restrictions on transfer imposed under applicable U....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "athensbancsh_a_15_2",
+      "contract_file": "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY AGREEMENT , 2009.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, 2  ATHENS BANCSHARES CORPORATION  up to    Shares  (subject to increase up to    shares)  COMMON SHARES  ($....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "macrogenicsi_a_16_2",
+      "contract_file": "MACROGENICSINC_08_02_2013-EX-10-COLLABORATION AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the Section 12 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 12, nformation and data, in any tangible or intangible form, including all Know-how subject to Section 12....",
+      "relevant_sections": [
+        "Section 12"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Ground truth batch 2. trap_a."
+    },
+    {
+      "id": "antares_phar_b_01_2",
+      "contract_file": "Antares Pharma, Inc. - Manufacturing Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Drug under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Drug' is defined as: 17-alpha hydroxyprogesterone caproate;  \"Effective Date\" has the meaning specified in the Preamble;  [***]  \"Excess Order\" has the meaning specified in Section 3. This definition applies wherever Drug is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Drug"
+      ],
+      "information_units": [
+        "Drug defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "garrettmotio_b_02_2",
+      "contract_file": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual Property Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Trademarks under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Trademarks' is defined as: trademarks, service marks, trade names, logos, slogans, trade dress or other source identifiers, including any registration or any application for registration therefor, together with all goodwill associated therewith. This definition applies wherever Trademarks is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Trademarks"
+      ],
+      "information_units": [
+        "Trademarks defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "ehaveinc_201_b_03_2",
+      "contract_file": "EhaveInc_20190515_20-F_EX-4.44_11678816_EX-4.44_License Agreement_ Reseller Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Point of Access under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Point of Access' is defined as: Ehave's, or its subcontractor's, border router, which is used to establish connectivity from the Ehave Platform to Ehave's, or its subcontractor's, Internet provider, or the public Internet. This definition applies wherever Point of Access is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Point of Access"
+      ],
+      "information_units": [
+        "Point of Access defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "rangeresourc_b_04_2",
+      "contract_file": "RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Consignee under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Consignee' is defined as: the party to whom a Shipper has ordered the delivery of Product. This definition applies wherever Consignee is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Consignee"
+      ],
+      "information_units": [
+        "Consignee defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "accurayinc_0_b_05_2",
+      "contract_file": "ACCURAYINC_09_01_2010-EX-10.31-DISTRIBUTOR AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with System(s) under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'System(s)' is defined as: the Accuray CyberKnife\u00ae Robotic Radiosurgery System or CyberKnife\u00ae VSI\u2122 System, as applicable. This definition applies wherever System(s) is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of System(s)"
+      ],
+      "information_units": [
+        "System(s) defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "energouscorp_b_06_2",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Change of Control under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Change of Control' is defined as: Defined in the Agreement. This definition applies wherever Change of Control is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Change of Control"
+      ],
+      "information_units": [
+        "Change of Control defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "babcock_wilc_b_07_2",
+      "contract_file": "BABCOCK_WILCOXENTERPRISES,INC_08_04_2015-EX-10.17-INTELLECTUAL PROPERTY AGREEMENT between THE BABCOCK _ WILCOX COMPANY and BABCOCK _ WILCOX ENTERPRISES, INC..txt",
+      "query": "What restrictions or rights apply in connection with Intellectual Property under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Intellectual Property' is defined as: Defined in the Agreement. This definition applies wherever Intellectual Property is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Intellectual Property"
+      ],
+      "information_units": [
+        "Intellectual Property defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "sonos__inc___b_08_2",
+      "contract_file": "Sonos, Inc. - Manufacturing Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Production Process Change Order under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Production Process Change Order' is defined as: a proposed change by either party to the Mass Production manufacturing process for a given Product. This definition applies wherever Production Process Change Order is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Production Process Change Order"
+      ],
+      "information_units": [
+        "Production Process Change Order defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "ipayment_inc_b_09_2",
+      "contract_file": "IPAYMENT,INC_05_14_2007-EX-10.1-SPONSORSHIP AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Change of Control under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Change of Control' is defined as: Defined in the Agreement. This definition applies wherever Change of Control is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Change of Control"
+      ],
+      "information_units": [
+        "Change of Control defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "audibleinc_2_b_10_2",
+      "contract_file": "AudibleInc_20001113_10-Q_EX-10.32_2599586_EX-10.32_Co-Branding Agreement_ Marketing Agreement_ Investment Distribution Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Change of Control under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Change of Control' is defined as: Defined in the Agreement. This definition applies wherever Change of Control is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Change of Control"
+      ],
+      "information_units": [
+        "Change of Control defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "remarkholdin_b_11_2",
+      "contract_file": "RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Open Free Web under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Open Free Web' is defined as: all websites (i) through which content can be indexed by Google and/or other consumer search engines; (ii) through which content is openly accessible by the public free of charge, and/or (iii) that do not charge a subscription fee or other fee for access to the content of the website. This definition applies wherever Open Free Web is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Open Free Web"
+      ],
+      "information_units": [
+        "Open Free Web defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "vericelcorp__b_12_2",
+      "contract_file": "VERICELCORP_08_06_2019-EX-10.10-SUPPLY AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Third Party under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Third Party' is defined as: any Person other than Vericel, MediWound or their respective Affiliates. This definition applies wherever Third Party is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Third Party"
+      ],
+      "information_units": [
+        "Third Party defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "entrustinc_0_b_13_2",
+      "contract_file": "ENTRUSTINC_07_24_1998-EX-10.5-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Patent under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Patent' is defined as: Defined in the Agreement. This definition applies wherever Patent is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Patent"
+      ],
+      "information_units": [
+        "Patent defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "oldapiwind_d_b_14_2",
+      "contract_file": "OLDAPIWIND-DOWNLTD_01_08_2016-EX-1.3-AGENCY AGREEMENT1.txt",
+      "query": "What restrictions or rights apply in connection with Directed Selling Efforts under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Directed Selling Efforts' is defined as: Defined in the Agreement. This definition applies wherever Directed Selling Efforts is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Directed Selling Efforts"
+      ],
+      "information_units": [
+        "Directed Selling Efforts defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "sandridgeene_b_15_2",
+      "contract_file": "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS AND MAINTENANCE AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Gathering Agreement under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Gathering Agreement' is defined as: that certain Gas Gathering Agreement dated as of even date herewith by and between SandRidge Exploration  and Production, LLC, as \"Shipper,\" and Owner, as \"Gatherer,\" as amended, restated or otherwise modified from time to time. This definition applies wherever Gathering Agreement is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Gathering Agreement"
+      ],
+      "information_units": [
+        "Gathering Agreement defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "sucampopharm_b_16_2",
+      "contract_file": "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Owned Real Property under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Owned Real Property' is defined as: the land listed on Schedule III. This definition applies wherever Owned Real Property is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Owned Real Property"
+      ],
+      "information_units": [
+        "Owned Real Property defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Ground truth batch 2. trap_b."
+    },
+    {
+      "id": "neonsystemsi_c_01_2",
+      "contract_file": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR AGREEMENT_New.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 2, and Section 3. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 2",
+        "Section 3",
+        "Section 4",
+        "Section 5"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 2 relevant",
+        "Section 3 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "phlvariablei_c_02_2",
+      "contract_file": "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 16.01.2, and Section 11.03.1. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 16.01.2",
+        "Section 11.03.1",
+        "Section 11.04",
+        "Section 12.02.1.6"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 16.01.2 relevant",
+        "Section 11.03.1 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "nuveen___rem_c_03_2",
+      "contract_file": "NUVEEN - REMARKETING AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 2, and Section 3. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 2",
+        "Section 3",
+        "Section 4",
+        "Section 5"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 2 relevant",
+        "Section 3 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "aspirityhold_c_04_2",
+      "contract_file": "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.01, Section 1.02, and Section 2.01. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.01",
+        "Section 1.02",
+        "Section 2.01",
+        "Section 2.02",
+        "Section 2.03"
+      ],
+      "information_units": [
+        "Section 1.01 relevant",
+        "Section 1.02 relevant",
+        "Section 2.01 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "pfhospitalit_c_05_2",
+      "contract_file": "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 6.15, Section 4.1, and Section 1.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 6.15",
+        "Section 4.1",
+        "Section 1.2",
+        "Section 1.3",
+        "Section 9.3"
+      ],
+      "information_units": [
+        "Section 6.15 relevant",
+        "Section 4.1 relevant",
+        "Section 1.2 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "bluehillsban_c_06_2",
+      "contract_file": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 3, and Section 2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 3",
+        "Section 2",
+        "Section 2(a)",
+        "Section 8"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 3 relevant",
+        "Section 2 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "metlife__inc_c_07_2",
+      "contract_file": "MetLife, Inc. - Remarketing Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 8, Section 3.3(a), and Section 5.2(a). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 8",
+        "Section 3.3(a)",
+        "Section 5.2(a)",
+        "Section 1",
+        "Section 3(j)"
+      ],
+      "information_units": [
+        "Section 8 relevant",
+        "Section 3.3(a) relevant",
+        "Section 5.2(a) relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "afsalabancor_c_08_2",
+      "contract_file": "AFSALABANCORPINC_08_01_1996-EX-1.1-AGENCY AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 2, and Section 7. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 2",
+        "Section 7",
+        "Section 3",
+        "Section 4"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 2 relevant",
+        "Section 7 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "etonpharmace_c_09_2",
+      "contract_file": "EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 7.5.2, Section 13.2, and Section 11.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 7.5.2",
+        "Section 13.2",
+        "Section 11.2",
+        "Section 9.2",
+        "Section 11.1"
+      ],
+      "information_units": [
+        "Section 7.5.2 relevant",
+        "Section 13.2 relevant",
+        "Section 11.2 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "curogrouphol_c_10_2",
+      "contract_file": "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 2.3, and Section 2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 2.3",
+        "Section 2",
+        "Section 2(b)",
+        "Section 2(c)"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 2.3 relevant",
+        "Section 2 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "transphorm_i_c_11_2",
+      "contract_file": "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.1(a), Section 2.1.7, and Section 3.3.1. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.1(a)",
+        "Section 2.1.7",
+        "Section 3.3.1",
+        "Section 4.9",
+        "Section 4.2"
+      ],
+      "information_units": [
+        "Section 1.1(a) relevant",
+        "Section 2.1.7 relevant",
+        "Section 3.3.1 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "ingevitycorp_c_12_2",
+      "contract_file": "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL PROPERTY AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 1.5, and Section 2.3(b). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 1.5",
+        "Section 2.3(b)",
+        "Section 2.4(a)",
+        "Section 3.1"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 1.5 relevant",
+        "Section 2.3(b) relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "reinsurance__c_13_2",
+      "contract_file": "Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 1(b), and Section 1(c). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 1(b)",
+        "Section 1(c)",
+        "Section 2",
+        "Section 2(a)"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 1(b) relevant",
+        "Section 1(c) relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "alamogordofi_c_14_2",
+      "contract_file": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 2, and Section 7. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 2",
+        "Section 7",
+        "Section 3",
+        "Section 4"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 2 relevant",
+        "Section 7 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "soupmaninc_2_c_15_2",
+      "contract_file": "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 1.1, and Section 5.1. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 1.1",
+        "Section 5.1",
+        "Section 3.2",
+        "Section 33"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 1.1 relevant",
+        "Section 5.1 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    },
+    {
+      "id": "adaptimmunet_c_48_2",
+      "contract_file": "ADAPTIMMUNETHERAPEUTICSPLC_04_06_2017-EX-10.11-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.3, Section 6002, and Section 1.6. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.3",
+        "Section 6002",
+        "Section 1.6",
+        "Section 5",
+        "Section 1.9"
+      ],
+      "information_units": [
+        "Section 1.3 relevant",
+        "Section 6002 relevant",
+        "Section 1.6 relevant"
+      ],
+      "notes": "Ground truth batch 2. trap_c."
+    }
+  ]
+}

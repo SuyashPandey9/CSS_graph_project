@@ -1,0 +1,892 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Ground truth from full 510-contract CUAD dataset. Best 48 queries.",
+  "_trap_types": {
+    "trap_a": "Invisible Exception",
+    "trap_b": "Distant Definition",
+    "trap_c": "Scattered Components"
+  },
+  "_source": "Full CUAD dataset (510 contracts) - scripted selection",
+  "annotations": [
+    {
+      "id": "revolutionmedic_a_01",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, Notwithstanding the foregoing, solely with respect to Sections 1....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "harpoontherapeu_a_02",
+      "contract_file": "HarpoonTherapeuticsInc_20200312_10-K_EX-10.18_12051356_EX-10.18_Development Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, nited States Supreme Court for a writ of certiorari or a similar appeal that is subject to discretionary review) can be or has been taken....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "berkeleylights__a_03",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, evelopment Plan , in each case from such Third Parties for the Beacon Platform, subject to a [***] percent ([***]%) mark-up;  1....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "upjohninc_20200_a_04",
+      "contract_file": "UpjohnInc_20200121_10-12G_EX-2.6_11948692_EX-2.6_Manufacturing Agreement_ Supply Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, Customer or its Affiliates in the Territory during the Term, upon the terms and subject to the conditions set forth herein....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "array_biopharma_a_05",
+      "contract_file": "Array BioPharma Inc. - LICENSE, DEVELOPMENT AND COMMERCIALIZATION AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the Section 4 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 4, 4 \"Array Know-How\" means, subject to Section 4....",
+      "relevant_sections": [
+        "Section 4"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "manufacturersse_a_06",
+      "contract_file": "MANUFACTURERSSERVICESLTD_06_05_2000-EX-10.14-OUTSOURCING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, ts and services delivered by either Party to the other under this Agreement are subject to the terms and conditions of this Agreement....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "bontonstoresinc_a_07",
+      "contract_file": "BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the section 11 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per section 11, its designees are granted derivative standing to pursue the Avoidance Actions (subject to section 11....",
+      "relevant_sections": [
+        "section 11"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "innoviva_inc_08_a_08",
+      "contract_file": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the Section 6 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 6, 69 \"Phase II Studies\" means, subject to Section 6....",
+      "relevant_sections": [
+        "Section 6"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "azulsa_20170303_a_09",
+      "contract_file": "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance Agreement1.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, ase the Stock to the Company and the Company agrees to take the Stock on lease, subject to the terms and conditions set forth on Exhibit 8....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "phasebiopharmac_a_10",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, Notwithstanding the foregoing, neither The Blackstone Group Inc....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "ceres_inc_01_25_a_11",
+      "contract_file": "CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, Any such fully executed SCHEDULE shall become a part of this Agreement and subject to the terms of this  Agreement....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "monsanto_compan_a_12",
+      "contract_file": "Monsanto Company - SECOND A_R EXCLUSIVE AGENCY AND MARKETING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, \"Excluded Markets\" means (i) any country subject to a comprehensive U....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "bellicumpharmac_a_13",
+      "contract_file": "BELLICUMPHARMACEUTICALS,INC_05_07_2019-EX-10.1-Supply Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, se, liability, or obligation, express or implied, on behalf of the other Party, except as expressly provided herein....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "nexstarfinanceh_a_14",
+      "contract_file": "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the Section 2(a) of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 2(a), Subject to the reduction of the Section 2(a) Amount in accordance with Section 2(a) hereof, Nexstar shall bear the cost of maintaining and repairing the Equipment....",
+      "relevant_sections": [
+        "Section 2(a)"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "dovapharmaceuti_a_15",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "What are the key obligations or exceptions in the relevant section of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per relevant section, THE COPY FILED HEREWITH OMITS THE INFORMATION SUBJECT TO A CONFIDENTIALITY REQUEST....",
+      "relevant_sections": [
+        "relevant section"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "fibrogeninc_10__a_16",
+      "contract_file": "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt",
+      "query": "What are the key obligations or exceptions in the Section 14 of this agreement?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "Per Section 14, that are Controlled by FG or its Affiliates during the term of this Agreement, subject to Section 14....",
+      "relevant_sections": [
+        "Section 14"
+      ],
+      "information_units": [
+        "Main obligation described",
+        "Exception or qualification present",
+        "Section reference included"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_a."
+    },
+    {
+      "id": "innoviva_inc_08_b_01",
+      "contract_file": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Phase I Studies under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Phase I Studies' is defined as: Defined in the Agreement. This definition applies wherever Phase I Studies is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Phase I Studies"
+      ],
+      "information_units": [
+        "Phase I Studies defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "bellicumpharmac_b_02",
+      "contract_file": "BELLICUMPHARMACEUTICALS,INC_05_07_2019-EX-10.1-Supply Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Third Party under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Third Party' is defined as: any corporation, association, or other entity that is not a Party or an Affiliate of a Party. This definition applies wherever Third Party is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Third Party"
+      ],
+      "information_units": [
+        "Third Party defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "ceres_inc_01_25_b_03",
+      "contract_file": "CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt",
+      "query": "What restrictions or rights apply in connection with LICENSE INCOME under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'LICENSE INCOME' is defined as: Defined in the Agreement. This definition applies wherever LICENSE INCOME is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of LICENSE INCOME"
+      ],
+      "information_units": [
+        "LICENSE INCOME defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "fibrogeninc_10__b_04",
+      "contract_file": "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Force Majeure Event under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Force Majeure Event' is defined as: the occurrence of any event causing a failure to perform where failure to perform is beyond the reasonable control of the non-performing party, as described in Section 20. This definition applies wherever Force Majeure Event is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Force Majeure Event"
+      ],
+      "information_units": [
+        "Force Majeure Event defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "fuelcellenergyi_b_05",
+      "contract_file": "FuelcellEnergyInc_20191106_8-K_EX-10.1_11868007_EX-10.1_Development Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Agreement under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Agreement' is defined as: this agreement, together with the appendices attached to this agreement and any Project Descriptions, extensions, renewals, or amendments hereof agreed to in writing and signed by the Parties. This definition applies wherever Agreement is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Agreement"
+      ],
+      "information_units": [
+        "Agreement defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "kingpharmaceuti_b_06",
+      "contract_file": "KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Third Party under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Third Party' is defined as: any Person other than King or Depomed or their respective Affiliates. This definition applies wherever Third Party is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Third Party"
+      ],
+      "information_units": [
+        "Third Party defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "aimmunetherapeu_b_07",
+      "contract_file": "AimmuneTherapeuticsInc_20200205_8-K_EX-10.3_11967170_EX-10.3_Development Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Major Territory under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Major Territory' is defined as: the [***]. This definition applies wherever Major Territory is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Major Territory"
+      ],
+      "information_units": [
+        "Major Territory defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "paratekpharmace_b_08",
+      "contract_file": "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Master Batch Record under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Master Batch Record' is defined as: Defined in the Agreement. This definition applies wherever Master Batch Record is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Master Batch Record"
+      ],
+      "information_units": [
+        "Master Batch Record defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "valencetechnolo_b_09",
+      "contract_file": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT VENTURE CONTRACT.txt",
+      "query": "What restrictions or rights apply in connection with Third Party under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Third Party' is defined as: Defined in the Agreement. This definition applies wherever Third Party is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Third Party"
+      ],
+      "information_units": [
+        "Third Party defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "cytodyninc_2020_b_10",
+      "contract_file": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License Agreement.txt",
+      "query": "What restrictions or rights apply in connection with CytoDyn Know-How under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'CytoDyn Know-How' is defined as: any and all Know-How Controlled by CytoDyn either or both as of the Effective Date or during the Term that is necessary or useful to Commercialize any Licensed Product in the Field in the Territory. This definition applies wherever CytoDyn Know-How is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of CytoDyn Know-How"
+      ],
+      "information_units": [
+        "CytoDyn Know-How defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "igenebiotechnol_b_11",
+      "contract_file": "IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with PARENT under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'PARENT' is defined as: Tate & Lyle Industries Ltd. This definition applies wherever PARENT is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of PARENT"
+      ],
+      "information_units": [
+        "PARENT defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "berkeleylights__b_12",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "What restrictions or rights apply in connection with Force Majeure Event under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Force Majeure Event' is defined as: Defined in the Agreement. This definition applies wherever Force Majeure Event is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Force Majeure Event"
+      ],
+      "information_units": [
+        "Force Majeure Event defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "sigatechnologie_b_13",
+      "contract_file": "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Change of Control under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Change of Control' is defined as: Defined in the Agreement. This definition applies wherever Change of Control is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Change of Control"
+      ],
+      "information_units": [
+        "Change of Control defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "phasebiopharmac_b_14",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Prohibited Investment under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Prohibited Investment' is defined as: Defined in the Agreement. This definition applies wherever Prohibited Investment is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Prohibited Investment"
+      ],
+      "information_units": [
+        "Prohibited Investment defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "zogenixinc_2019_b_15",
+      "contract_file": "ZogenixInc_20190509_10-Q_EX-10.2_11663313_EX-10.2_Distributor Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Change of Control under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Change of Control' is defined as: Defined in the Agreement. This definition applies wherever Change of Control is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Change of Control"
+      ],
+      "information_units": [
+        "Change of Control defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "harpoontherapeu_b_16",
+      "contract_file": "HarpoonTherapeuticsInc_20200312_10-K_EX-10.18_12051356_EX-10.18_Development Agreement.txt",
+      "query": "What restrictions or rights apply in connection with Phase 0 under this agreement?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "'Phase 0' is defined as: Defined in the Agreement. This definition applies wherever Phase 0 is referenced in the Agreement.",
+      "relevant_sections": [
+        "Definition of Phase 0"
+      ],
+      "information_units": [
+        "Phase 0 defined",
+        "Definition applies throughout",
+        "Usage context"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_b."
+    },
+    {
+      "id": "kingpharmaceuti_c_01",
+      "contract_file": "KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.1, Section 6.8(a), and Section 1.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.1",
+        "Section 6.8(a)",
+        "Section 1.2",
+        "Section 1.3",
+        "Section 10.1"
+      ],
+      "information_units": [
+        "Section 1.1 relevant",
+        "Section 6.8(a) relevant",
+        "Section 1.2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "verizonabsllc_2_c_02",
+      "contract_file": "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.1, Section 2.1, and Section 2.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.1",
+        "Section 2.1",
+        "Section 2.2",
+        "Section 2.3",
+        "Section 2.4"
+      ],
+      "information_units": [
+        "Section 1.1 relevant",
+        "Section 2.1 relevant",
+        "Section 2.2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "gooseheadinsura_c_03",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.2, Section 5, and Section 1.4. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.2",
+        "Section 5",
+        "Section 1.4",
+        "Section 2",
+        "Section 6"
+      ],
+      "information_units": [
+        "Section 1.2 relevant",
+        "Section 5 relevant",
+        "Section 1.4 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "digitalcinemade_c_04",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 7.1, Section 7.2, and Section 3.6(b). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 7.1",
+        "Section 7.2",
+        "Section 3.6(b)",
+        "Section 14.8",
+        "Section 10.1"
+      ],
+      "information_units": [
+        "Section 7.1 relevant",
+        "Section 7.2 relevant",
+        "Section 3.6(b) relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "coherusbioscien_c_05",
+      "contract_file": "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 9.4.3, and Section 9.4.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 9.4.3",
+        "Section 9.4.2",
+        "Section 11.1",
+        "Section 1.61"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 9.4.3 relevant",
+        "Section 9.4.2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "reynoldsconsume_c_06",
+      "contract_file": "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.1, Section 3.1(c), and Section 3.3(b). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.1",
+        "Section 3.1(c)",
+        "Section 3.3(b)",
+        "Section 5.1",
+        "Section 10.1"
+      ],
+      "information_units": [
+        "Section 1.1 relevant",
+        "Section 3.1(c) relevant",
+        "Section 3.3(b) relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "bloomenergycorp_c_07",
+      "contract_file": "BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 1.1, and Section 1.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 1.1",
+        "Section 1.2",
+        "Section 2",
+        "Section 2.1"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 1.1 relevant",
+        "Section 1.2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "rockymountainch_c_08",
+      "contract_file": "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.1, Section 13(d), and Section 14(d). A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.1",
+        "Section 13(d)",
+        "Section 14(d)",
+        "Section 6.6(d)",
+        "Section 6.4(b)"
+      ],
+      "information_units": [
+        "Section 1.1 relevant",
+        "Section 13(d) relevant",
+        "Section 14(d) relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "immunomedicsinc_c_09",
+      "contract_file": "IMMUNOMEDICSINC_08_07_2019-EX-10.1-PROMOTION AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1, Section 9.2, and Section 7.2.2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1",
+        "Section 9.2",
+        "Section 7.2.2",
+        "Section 7.2.1",
+        "Section 5.1.1"
+      ],
+      "information_units": [
+        "Section 1 relevant",
+        "Section 9.2 relevant",
+        "Section 7.2.2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "invendacorp_200_c_42",
+      "contract_file": "InvendaCorp_20000828_S-1A_EX-10.2_2588206_EX-10.2_Co-Branding Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 4, Section 3(d), and Section 2. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 4",
+        "Section 3(d)",
+        "Section 2",
+        "Section 16",
+        "Section 5(a)"
+      ],
+      "information_units": [
+        "Section 4 relevant",
+        "Section 3(d) relevant",
+        "Section 2 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "exactsciencesco_c_43",
+      "contract_file": "ExactSciencesCorp_20180822_8-K_EX-10.1_11331629_EX-10.1_Promotion Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 3.2(c), Section 2.5, and Section 3.3. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 3.2(c)",
+        "Section 2.5",
+        "Section 3.3",
+        "Section 4.2(c)",
+        "Section 4.7(b)"
+      ],
+      "information_units": [
+        "Section 3.2(c) relevant",
+        "Section 2.5 relevant",
+        "Section 3.3 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "cerenceinc_2019_c_44",
+      "contract_file": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual Property Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 1.01, Section 2.01, and Section 2.02. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 1.01",
+        "Section 2.01",
+        "Section 2.02",
+        "Section 2.03",
+        "Section 3.01"
+      ],
+      "information_units": [
+        "Section 1.01 relevant",
+        "Section 2.01 relevant",
+        "Section 2.02 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "microgenics_cor_c_45",
+      "contract_file": "Microgenics Corporation - Collaborative Development and Commercialization Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 2.6, Section 4.2.5, and Section 2.1. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 2.6",
+        "Section 4.2.5",
+        "Section 2.1",
+        "Section 4.3.2.3",
+        "Section 9.4.4.1"
+      ],
+      "information_units": [
+        "Section 2.6 relevant",
+        "Section 4.2.5 relevant",
+        "Section 2.1 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "moelis_co_03_24_c_46",
+      "contract_file": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 15.3, Section 6.1, and Section 3.5. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 15.3",
+        "Section 6.1",
+        "Section 3.5",
+        "Section 10.1",
+        "Section 3.2"
+      ],
+      "information_units": [
+        "Section 15.3 relevant",
+        "Section 6.1 relevant",
+        "Section 3.5 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "foundationmedic_c_47",
+      "contract_file": "FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 17, Section 6, and Section 6.3. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 17",
+        "Section 6",
+        "Section 6.3",
+        "Section 6.1.7",
+        "Section 6.2"
+      ],
+      "information_units": [
+        "Section 17 relevant",
+        "Section 6 relevant",
+        "Section 6.3 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    },
+    {
+      "id": "pacira_pharmace_c_48",
+      "contract_file": "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT.txt",
+      "query": "List all material obligations, rights, or conditions that span multiple sections of this agreement.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "The Agreement addresses these topics across multiple sections including Section 5, Section 2.1, and Section 3.19. A complete answer requires aggregating information from these and potentially other sections.",
+      "relevant_sections": [
+        "Section 5",
+        "Section 2.1",
+        "Section 3.19",
+        "Section 5.4",
+        "Section 6.4"
+      ],
+      "information_units": [
+        "Section 5 relevant",
+        "Section 2.1 relevant",
+        "Section 3.19 relevant"
+      ],
+      "notes": "Selected from full 510-contract CUAD dataset. trap_c."
+    }
+  ]
+}
