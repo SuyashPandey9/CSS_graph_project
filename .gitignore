@@ -7,3 +7,25 @@ __pycache__/
 chroma_cuad_db/
 results/
 graphrag_workspace/
+
+# Secrets
+.env*
+*.env
+
+# Test files (incremental debug tests)
+test_*.py
+
+# Draft/old data
+data/fixed_corpus.json
+data/ground_truth_2.json
+data/ground_truth_3.json
+data/ground_truth_full_dataset.json
+data/ground_truth_dry_run.json
+data/user_graph.json
+data/ANNOTATION_INSTRUCTIONS.md
+
+# Misc
+cursor_testing_protocol_for_v3_vs_tradi.*
+*.ipynb
+streaming/demo.py
+.claude/

@@ -5,7 +5,9 @@ Now includes FAISS index, pre-computed IDF, and cross-reference edges.
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict, List, Optional
 
 import numpy as np
@@ -30,10 +32,10 @@ except ImportError:
 @dataclass
 class FrozenState:
     """Container for frozen, deterministic tools and corpus.
-    
+
     Includes:
     - Pre-computed corpus embeddings
-    - FAISS index for O(log n) similarity search (or ChromaDB when chroma_store set)
+    - FAISS index for O(log n) similarity search (or ChromaDB / Pinecone when set)
     - Pre-computed IDF dictionary for entity overlap (Fix 1c.1)
     - Pre-computed cross-reference edges (Fix 3.3 + 2.10)
     """
@@ -49,6 +51,7 @@ class FrozenState:
     idf_dict: Dict[str, float]  # Pre-computed IDF per term (Fix 1c.1)
     precomputed_edges: List[object]  # Pre-computed cross-ref edges (Fix 3.3)
     chroma_store: Optional[object] = None  # Chroma vector store when using persistent ChromaDB
+    pinecone_index: Optional[object] = None  # Pinecone Index when using persistent Pinecone store
 
     @classmethod
     def build(cls, corpus: Corpus | None = None, *, use_chunking: bool = True) -> "FrozenState":
@@ -237,16 +240,145 @@ class FrozenState:
             chroma_store=chroma,
         )
 
+    @classmethod
+    def build_from_pinecone(
+        cls,
+        index_name: str,
+        corpus_cache_path: str | None = None,
+        idf_cache_path: str | None = None,
+        cross_ref_cache_path: str | None = None,
+    ) -> "FrozenState":
+        """Build FrozenState backed by a persistent Pinecone index.
+
+        Uses Pinecone for similarity search. Corpus text is loaded from the
+        JSON cache written by scripts/load_cuad_to_pinecone.py.
+
+        Args:
+            index_name: Pinecone index name (must already exist).
+            corpus_cache_path: Path to pinecone_corpus_cache.json (id → {title, text, source}).
+                               Defaults to data/pinecone_corpus_cache.json.
+            idf_cache_path: Path to idf_dict.json. Defaults to data/idf_dict.json.
+            cross_ref_cache_path: Path to cross_ref_edges.json. Defaults to data/cross_ref_edges.json.
+        """
+        import os
+        from pinecone import Pinecone
+
+        # Load .env / .env.txt via project's config module
+        try:
+            from config.settings import _load_env
+            _load_env()
+        except Exception:
+            pass
+
+        data_dir = Path(__file__).resolve().parent.parent / "data"
+        corpus_cache_path = corpus_cache_path or str(data_dir / "pinecone_corpus_cache.json")
+        idf_cache_path = idf_cache_path or str(data_dir / "idf_dict.json")
+        cross_ref_cache_path = cross_ref_cache_path or str(data_dir / "cross_ref_edges.json")
+
+        # Connect to Pinecone
+        api_key = os.environ.get("PINECONE_API_KEY", "")
+        if not api_key:
+            raise EnvironmentError("PINECONE_API_KEY environment variable not set.")
+        pc = Pinecone(api_key=api_key)
+        pinecone_index = pc.Index(index_name)
+        stats = pinecone_index.describe_index_stats()
+        print(f"[FrozenState] Connected to Pinecone index '{index_name}' "
+              f"({stats.total_vector_count} vectors).")
+
+        # Load corpus from JSON cache
+        corpus_cache_file = Path(corpus_cache_path)
+        if not corpus_cache_file.exists():
+            raise FileNotFoundError(
+                f"Corpus cache not found: {corpus_cache_path}\n"
+                f"Run: python -m scripts.load_cuad_to_pinecone first."
+            )
+        corpus_cache = json.load(corpus_cache_file.open(encoding="utf-8"))
+        from core.types import CorpusDocument
+        corpus_docs = [
+            CorpusDocument(
+                id=doc_id,
+                title=entry["title"],
+                text=entry["text"],
+                source=entry.get("source", ""),
+            )
+            for doc_id, entry in corpus_cache.items()
+        ]
+        corpus = Corpus(documents=corpus_docs)
+        print(f"[FrozenState] Loaded {len(corpus_docs)} documents from corpus cache.")
+
+        # Load IDF dict from cache
+        idf_dict: Dict[str, float] = {}
+        idf_file = Path(idf_cache_path)
+        if idf_file.exists():
+            idf_dict = json.load(idf_file.open(encoding="utf-8"))
+            print(f"[FrozenState] Loaded IDF dict ({len(idf_dict)} terms) from cache.")
+        else:
+            print(f"[FrozenState] IDF cache not found, computing from corpus...")
+            from graph.edge_builder import compute_corpus_idf
+            idf_dict = compute_corpus_idf(corpus.documents)
+
+        # Load cross-ref edges from cache
+        precomputed_edges = []
+        cr_file = Path(cross_ref_cache_path)
+        if cr_file.exists():
+            raw_edges = json.load(cr_file.open(encoding="utf-8"))
+            # Stored as [[src, tgt, type], ...] — convert back to tuples
+            precomputed_edges = [tuple(e) for e in raw_edges]
+            print(f"[FrozenState] Loaded {len(precomputed_edges)} cross-ref edges from cache.")
+        else:
+            print(f"[FrozenState] Cross-ref cache not found, skipping precomputation.")
+
+        embedder = NeuralEmbedder()
+
+        return cls(
+            corpus=corpus,
+            parser=ParserStub(),
+            embedder=embedder,
+            nli=NLIStub(),
+            contradiction=ContradictionStub(),
+            corpus_embeddings={},  # Not pre-loaded; Pinecone used for similarity search
+            faiss_index=None,
+            doc_id_list=[],
+            idf_dict=idf_dict,
+            precomputed_edges=precomputed_edges,
+            chroma_store=None,
+            pinecone_index=pinecone_index,
+        )
+
     def get_doc_embedding(self, doc_id: str) -> List[float]:
         """Get pre-computed embedding for a document."""
         return self.corpus_embeddings.get(doc_id, [])
     
-    def search_similar(self, query_vec: List[float], top_k: int = 5, exclude_ids: set = None) -> List[tuple]:
-        """Fast similarity search using FAISS, ChromaDB, or fallback.
-        
+    def search_similar(self, query_vec: List[float], top_k: int = 5, exclude_ids: set = None,
+                       filter_metadata: dict = None) -> List[tuple]:
+        """Fast similarity search using Pinecone, FAISS, ChromaDB, or fallback.
+
+        Args:
+            filter_metadata: Optional Pinecone metadata filter, e.g.
+                             {"contract": {"$eq": "ENERGOUSCORP_..."}}
         Returns: List of (doc_id, score) tuples (score higher = more similar)
         """
         exclude_ids = exclude_ids or set()
+
+        if self.pinecone_index is not None:
+            # Use Pinecone for similarity search
+            search_k = min(top_k + len(exclude_ids) + 20, 1000)
+            query_kwargs = {
+                "vector": query_vec,
+                "top_k": search_k,
+                "include_metadata": False,
+            }
+            if filter_metadata:
+                query_kwargs["filter"] = filter_metadata
+            results = self.pinecone_index.query(**query_kwargs)
+            out = []
+            for match in results.matches:
+                if match.id in exclude_ids:
+                    continue
+                out.append((match.id, float(match.score)))
+                if len(out) >= top_k:
+                    break
+            return out
 
         if self.chroma_store is not None:
             # Use persistent ChromaDB for retrieval (query returns ids directly)
@@ -307,22 +439,34 @@ class FrozenState:
 
 _CACHED_STATE: FrozenState | None = None
 _CACHED_CHROMA_PATH: str | None = None
+_CACHED_PINECONE_INDEX: str | None = None
 
 
 def get_shared_state(
     *,
     corpus: Corpus | None = None,
     chroma_path: str | None = None,
+    pinecone_index: str | None = None,
     refresh: bool = False,
 ) -> FrozenState:
     """Return a cached FrozenState to avoid reloading models per query.
 
     Args:
-        corpus: Corpus to use (ignored if chroma_path set)
+        corpus: Corpus to use (ignored if chroma_path or pinecone_index set).
         chroma_path: Path to persistent ChromaDB. When set, uses Chroma for retrieval.
-        refresh: Force rebuild of state
+        pinecone_index: Pinecone index name. When set, uses Pinecone for retrieval.
+                        Takes precedence over chroma_path.
+        refresh: Force rebuild of state.
     """
-    global _CACHED_STATE, _CACHED_CHROMA_PATH
+    global _CACHED_STATE, _CACHED_CHROMA_PATH, _CACHED_PINECONE_INDEX
+
+    if pinecone_index:
+        if refresh or _CACHED_STATE is None or _CACHED_PINECONE_INDEX != pinecone_index:
+            _CACHED_STATE = FrozenState.build_from_pinecone(pinecone_index)
+            _CACHED_PINECONE_INDEX = pinecone_index
+            _CACHED_CHROMA_PATH = None
+        return _CACHED_STATE
+
     if refresh or _CACHED_STATE is None:
         if chroma_path:
             _CACHED_STATE = FrozenState.build_from_chroma(chroma_path)
@@ -330,9 +474,11 @@ def get_shared_state(
         else:
             _CACHED_STATE = FrozenState.build(corpus)
             _CACHED_CHROMA_PATH = None
+        _CACHED_PINECONE_INDEX = None
     elif chroma_path and chroma_path != _CACHED_CHROMA_PATH:
         _CACHED_STATE = FrozenState.build_from_chroma(chroma_path)
         _CACHED_CHROMA_PATH = chroma_path
+        _CACHED_PINECONE_INDEX = None
     return _CACHED_STATE
 
 

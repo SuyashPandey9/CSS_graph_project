@@ -34,16 +34,18 @@ MIN_STEPS_BEFORE_EARLY_STOP = 3
 DEFAULT_TOP_K = 10
 
 
-def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = None) -> Graph:
+def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = None,
+                                    filter_metadata: dict = None) -> Graph:
     """Build G₀ using ENTITY-BASED retrieval (V3's key differentiator).
-    
+
     Fix 3.6: Retrieves top_k=10 chunks (up from 6) using preprocessor
     entities when available for better multi-hop coverage.
-    
+
     Args:
         query: User's query
         state: FrozenState with FAISS index
         top_k: Total number of chunks to retrieve (default: 10)
+        filter_metadata: Optional Pinecone metadata filter for contract-scoped retrieval
     
     Returns:
         Graph with document nodes from entity-based retrieval
@@ -78,7 +80,8 @@ def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = 
     per_entity_k = max(2, top_k // (len(all_search_terms) + 1)) if all_search_terms else top_k
     
     query_vec = state.embedder.embed(query)
-    query_results = state.search_similar(query_vec, top_k=per_entity_k, exclude_ids=seen_ids)
+    query_results = state.search_similar(query_vec, top_k=per_entity_k, exclude_ids=seen_ids,
+                                            filter_metadata=filter_metadata)
     for doc_id, score in query_results:
         if doc_id not in seen_ids and doc_id in doc_map:
             doc = doc_map[doc_id]
@@ -86,7 +89,7 @@ def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = 
                 id=doc_id,
                 text=doc.text,
                 metadata={"source": "query_match", "title": doc.title},
-                confidence=score,
+                confidence=max(0.0, score),
                 embedding=state.corpus_embeddings.get(doc_id),
             )
             nodes.append(node)
@@ -96,7 +99,8 @@ def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = 
     if all_search_terms:
         for term in all_search_terms[:6]:
             term_vec = state.embedder.embed(term)
-            term_results = state.search_similar(term_vec, top_k=per_entity_k, exclude_ids=seen_ids)
+            term_results = state.search_similar(term_vec, top_k=per_entity_k, exclude_ids=seen_ids,
+                                                    filter_metadata=filter_metadata)
             for doc_id, score in term_results:
                 if doc_id not in seen_ids and doc_id in doc_map:
                     doc = doc_map[doc_id]
@@ -104,7 +108,7 @@ def _build_initial_retrieval_graph(query: str, state: FrozenState, top_k: int = 
                         id=doc_id,
                         text=doc.text,
                         metadata={"source": f"entity:{term}", "title": doc.title},
-                        confidence=score * 0.9,
+                        confidence=max(0.0, score * 0.9),
                         embedding=state.corpus_embeddings.get(doc_id),
                     )
                     nodes.append(node)
@@ -152,6 +156,7 @@ def optimize(
     max_steps: int = 5,
     state: FrozenState | None = None,
     initial_graph: Graph | None = None,
+    filter_metadata: dict = None,
 ) -> Graph:
     """Run the greedy optimization loop with early stopping.
     
@@ -172,7 +177,7 @@ def optimize(
     if initial_graph is not None:
         current = Graph(nodes=list(initial_graph.nodes), edges=list(initial_graph.edges))
     else:
-        current = _build_initial_retrieval_graph(query, state)
+        current = _build_initial_retrieval_graph(query, state, filter_metadata=filter_metadata)
     
     # Track best graph seen
     best_graph = current

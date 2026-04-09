@@ -57,20 +57,25 @@ def select_action(
         ("stop", stop(graph, state)),
     ])
 
-    # Find best action
+    # Find best action using css_raw for comparison (Fix E2).
+    # css_raw = raw weighted_sum, not sigmoid-compressed.
+    # Sigmoid maps all legal-domain scores to ~0.5, hiding real differences.
+    # css_raw preserves the numeric spread so the optimizer can actually
+    # differentiate between a good expand and a bad one.
     best_action = "stop"
     best_graph = graph
-    best_score = -1.0
-    
+    best_score = -float("inf")
+
     for name, candidate in candidates:
         scores = compute_css_final(
-            candidate, query=query, user_graph=user_graph, 
+            candidate, query=query, user_graph=user_graph,
             embedder=embedder
         )
-        css_final = scores["css_final"]
-        
-        if css_final > best_score:
-            best_score = css_final
+        # Use css_raw for internal comparison; css_final used for reporting only
+        compare_score = scores.get("css_raw", scores["css_final"])
+
+        if compare_score > best_score:
+            best_score = compare_score
             best_action = name
             best_graph = candidate
 

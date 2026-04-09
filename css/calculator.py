@@ -398,28 +398,34 @@ def compute_css(graph: Graph, query: str, user_graph: Graph, *,
 
 
 def compute_css_final(graph: Graph, query: str, user_graph: Graph, *,
-                      embedder=None, nli=None, contradiction_fn=None, 
+                      embedder=None, nli=None, contradiction_fn=None,
                       budget: int = DEFAULT_TOKEN_BUDGET,
                       weights_override: dict = None,
                       extra_features: dict = None) -> dict:
     """Compute final CSS score.
-    
+
     Fix 1.2 + 1.3: Multipliers removed. CSS_final = CSS.
-    Semantic and Contradict stubs were non-functional:
-      - Semantic was a crude word-overlap gate (1.0 or 0.2), not real NLI
-      - Contradict always returned 0.0
-    When real NLI is implemented, add them back as FEATURES (not multipliers).
+    Fix E2: Added css_raw (raw weighted_sum) for internal optimizer comparison.
+
+    css_raw: raw weighted sum — used by greedy_policy for candidate comparison.
+             Preserves full numeric spread even when sigmoid compresses scores.
+    css_final (sigmoid): used for external reporting and thresholds only.
     """
-    values = compute_css(graph, query, user_graph, embedder=embedder, 
+    values = compute_css(graph, query, user_graph, embedder=embedder,
                          budget=budget,
                          weights_override=weights_override,
                          extra_features=extra_features)
-    
+
     # Fix 1.2 + 1.3: CSS_final = CSS (no multipliers)
     values["css_final"] = values["css_score"]
-    
+
+    # Fix E2: Expose raw weighted_sum for internal optimizer comparisons.
+    # The sigmoid compresses all legal-domain scores into a narrow band (~0.5),
+    # making candidates hard to differentiate. css_raw preserves the full spread.
+    values["css_raw"] = values["weighted_sum"]
+
     # Keep stubs zeroed for backward compatibility of return dict
     values["semantic"] = 1.0
     values["contradict"] = 0.0
-    
+
     return values

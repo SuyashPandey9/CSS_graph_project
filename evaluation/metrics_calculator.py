@@ -595,6 +595,102 @@ For each chunk, respond with ONLY the chunk number and verdict, one per line, li
         return 0.0
 
 
+# =============================================================================
+# DOMAIN-SPECIFIC METRICS (Day 4 — no API cost)
+# =============================================================================
+
+
+def clause_coverage(context: str, clauses_combined: list[str],
+                    ground_truth_answer: str) -> float:
+    """Count how many CUAD clause-type spans appear in the retrieved context.
+
+    For each clause in ``clauses_combined``, extracts key terms from the
+    ground truth section labeled ``[Clause Name]`` and checks whether those
+    terms appear in the retrieved context.
+
+    Args:
+        context: The retrieved context text (from V3's graph or TRAG's chunks).
+        clauses_combined: List of CUAD clause names, e.g.
+            ``["Cap On Liability", "Uncapped Liability"]``.
+        ground_truth_answer: The full ground truth answer (contains
+            ``[Clause Name]: <span text>`` sections).
+
+    Returns:
+        Fraction of clauses whose key content was found in the context [0, 1].
+    """
+    if not context or not clauses_combined:
+        return 0.0
+
+    context_lower = context.lower()
+    found = 0
+
+    for clause in clauses_combined:
+        # Extract the ground truth span for this clause type
+        pattern = re.compile(
+            r"\[" + re.escape(clause) + r"\]\s*:\s*(.+?)(?=\n\n\[|\Z)",
+            re.DOTALL | re.IGNORECASE,
+        )
+        match = pattern.search(ground_truth_answer)
+        if not match:
+            # If no labeled span, do a simple clause-name keyword check
+            if clause.lower().replace(" ", "") in context_lower.replace(" ", ""):
+                found += 1
+            continue
+
+        span_text = match.group(1).strip()
+        # Extract significant keywords from the span (4+ chars, not stop words)
+        keywords = set(
+            w.lower()
+            for w in _WORD_RE.findall(span_text)
+            if len(w) >= 4 and w.lower() not in _LEGAL_STOPWORDS
+        )
+
+        if not keywords:
+            found += 1  # Trivial span — count as found
+            continue
+
+        # If ≥40% of keywords appear in context, clause is "covered"
+        hits = sum(1 for kw in keywords if kw in context_lower)
+        if hits / len(keywords) >= 0.40:
+            found += 1
+
+    return found / len(clauses_combined)
+
+
+# Stopwords for legal text — common words that don't indicate clause coverage
+_LEGAL_STOPWORDS = frozenset({
+    "the", "and", "for", "that", "this", "with", "shall", "will", "such",
+    "under", "from", "have", "been", "each", "other", "which", "section",
+    "agreement", "party", "parties", "upon", "hereof", "herein", "thereof",
+    "therein", "pursuant", "respect", "accordance", "provided", "however",
+    "including", "without", "limitation",
+})
+
+
+def section_diversity(retrieved_doc_ids: list[str]) -> int:
+    """Count unique contract sections (parent chunks) in retrieved nodes.
+
+    Each doc_id follows the pattern ``<contract>_chunk_NNN``.  We extract
+    the chunk index and count the number of *distinct* chunk positions.
+    For V3, multi-hop retrieval should yield chunks from many sections;
+    TRAG typically returns 1–2 neighbouring chunks.
+
+    Args:
+        retrieved_doc_ids: List of chunk IDs retrieved by the system.
+
+    Returns:
+        Number of unique section-chunks retrieved (int ≥ 0).
+    """
+    if not retrieved_doc_ids:
+        return 0
+
+    unique_chunks: set[str] = set()
+    for doc_id in retrieved_doc_ids:
+        # Normalise: strip trailing whitespace / lowercase
+        unique_chunks.add(doc_id.strip())
+    return len(unique_chunks)
+
+
 def ragas_aspect_coverage(query: str, answer: str) -> float:
     """RAGAS-style Aspect Coverage (supplementary metric).
     

@@ -1,0 +1,1009 @@
+{
+  "_schema_version": "2.0",
+  "_description": "Ground truth from CUADv1.json professional annotations. 44 multi-hop queries across 8 contracts.",
+  "_trap_types": {
+    "trap_a": "Invisible Exception — requires finding both a clause and its override/exception",
+    "trap_b": "Distant Definition — requires finding a defined term AND the clause that uses it",
+    "trap_c": "Scattered Components — requires assembling information from 3+ sections"
+  },
+  "_generation_method": "Automated from CUADv1.json exact answer spans. Each query combines 2-3 related CUAD clause types.",
+  "_stats": {
+    "trap_a": 15,
+    "trap_b": 14,
+    "trap_c": 15,
+    "total": 44
+  },
+  "annotations": [
+    {
+      "id": "energous_a_01",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: EXCEPT IN THE CASE OF (a) ANY BREACH OF SECTION 10 (CONFIDENTIALITY), (b) THE PARTIES' OBLIGATIONS UNDER SECTION 12 (INDEMNIFICATION), (c) A PARTY'S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT, OR (d) LIABILITY ARISING FROM EPIDEMIC DEFECTS (WHICH WILL BE SUBJECT TO THE LIMITATION SET FORTH IN SECTION 11.2(d)), IN NO EVENT WILL EITHER PARTY BE LIABLE UNDER THIS AGREEMENT, REGARDLESS OF THE FORM OF ANY CLAIM OR ACTION (WHETHER IN CONTRACT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE), FOR ANY (i) INDIRE...\n\n[Uncapped Liability]: EXCEPT IN THE CASE OF (a) ANY BREACH OF SECTION 10 (CONFIDENTIALITY), (b) THE PARTIES' OBLIGATIONS UNDER SECTION 12 (INDEMNIFICATION), (c) A PARTY'S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT, OR (d) LIABILITY ARISING FROM EPIDEMIC DEFECTS (WHICH WILL BE SUBJECT TO THE LIMITATION SET FORTH IN SECTION 11.2(d)), IN NO EVENT WILL EITHER PARTY BE LIABLE UNDER THIS AGREEMENT, REGARDLESS OF THE FORM OF ANY CLAIM OR ACTION (WHETHER IN CONTRACT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE), FOR ANY (i) INDIRE...",
+      "relevant_sections": [
+        "offset_56075",
+        "offset_56075"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Exception or qualification in Cap On Liability is identified",
+        "Uncapped Liability clause content is present",
+        "Exception or qualification in Uncapped Liability is identified"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "energous_a_02",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: Until expiration or earlier termination of the Agreement, DIALOG agrees that it and its Affiliates will not, without ENERGOUS' written approval, intentionally sell, distribute or work with any third party to develop products incorporating any Uncoupled Power Transfer Technology other than Licensed Products; provided, however, that DIALOG shall not be under any such restrictions in relation to services or products it provides to the Key Customer in the event the Key Customer terminates its agreem...\n\n[Competitive Restriction Exception]: However, ENERGOUS is allowed to engage with a Semiconductor Supplier to supply comparable products or product die to a customer if either (i) the customer which has not been engaged with DIALOG with respect to such product or product die notifies ENERGOUS or DIALOG in writing by an authorized officer of the customer that it does not want to use DIALOG or a DIALOG Affiliate as a supplier of such product or product die; or (ii) if DIALOG has been engaged with the customer, the customer notifies EN...",
+      "relevant_sections": [
+        "8.2 N",
+        "Section 2.5"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "energous_b_01",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: ENERGOUS will have the right to terminate this Agreement immediately upon the issuance of written notice to DIALOG (A) if DIALOG undergoes a Change of Control involving a competitor of ENERGOUS (as reasonably determined by ENERGOUS), or (B) if DIALOG or any of its Affiliates acquires, whether directly or indirectly through a sale of assets or a Change of Control transaction or otherwise, any competitor of ENERGOUS. DIALOG will provide ENERGOUS with notice of any such Change of Control or acquisi...\n\n[Anti-Assignment]: This Agreement may not be assigned by either party without the express written consent of the other party, which approval will not be unreasonably withheld or delayed, except that either party may (without consent but with notice to the other party) assign this Agreement in its entirety to any successor in the event of a Change of Control of such party.",
+      "relevant_sections": [
+        "offset_59931",
+        "20.10 A"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Anti-Assignment clause content is present",
+        "Exception or qualification in Anti-Assignment is identified"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "energous_b_02",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: ENERGOUS hereby grants DIALOG a non-exclusive, non-transferable (except as set forth in Section 2) license under the Product IP to use any of the Deposit Materials released from escrow for the purpose of fixing an Epidemic Defect or other Product design or production issue impacting yield or quality during the Term and, if applicable, any Wind Down Period or Continuing Obligation period, including, but not limited to, authorizing any third party subcontractor to manufacture and supply Products, ...\n\n[Ip Ownership Assignment]: Upon the termination of DIALOG's right to manufacture the Licensed Products following any expiration or termination of the Agreement or any Wind Down Period or Continuing Obligation period, as applicable, then all right, title and interest in the Tooling will automatically transfer to ENERGOUS subject to any Third Party IP, and DIALOG will, at ENERGOUS' option, either sell any Tooling in its possession to ENERGOUS at cost or destroy the Tooling and certify in writing as to same.",
+      "relevant_sections": [
+        "16.3 L",
+        "offset_21975"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Exception or qualification in License Grant is identified",
+        "Ip Ownership Assignment clause content is present",
+        "Exception or qualification in Ip Ownership Assignment is identified"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "energous_c_01",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: Royalties and Service Fees payable by DIALOG and/or its Affiliates to ENERGOUS hereunder will be calculated on a Product by Product basis as defined herein.\n\n[Minimum Commitment]: DIALOG may terminate this Agreement, immediately upon issuance of written notice to ENERGOUS in the event that: (A) DIALOG or its Affiliates fail to achieve a design-win pipeline with an annual projected sales value to DIALOG of at least [***] in the [***] after the availability of a Mass Production Qualified Product; or (B) the aggregate annual Net Sales of Products are below [***] by the [***] of the availability of a Mass Production Qualified Product, or below [***] by the [***] of the availa...\n\n[Audit Rights]: During the Record Retention Period, ENERGOUS may appoint a mutually agreed independent, internationally recognized third-party certified auditor who will have the right to inspect and copy the Records upon reasonable prior notice, and DIALOG will (and will cause its Affiliates to) allow necessary access including, as applicable, to its premises where such Records are located. ENERGOUS may exercise such right to this independent-third party audit no more than one time per calendar year and each s...",
+      "relevant_sections": [
+        "offset_78200",
+        "offset_61497",
+        "9.6 A"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Minimum Commitment clause content is present",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "energous_c_02",
+      "contract_file": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: If, at the time of notice of any termination of this Agreement, DIALOG or any of its Affiliates has a written supply contract with a customer that extends beyond the end of the Wind Down Period (a \"Continuing Obligation\"), DIALOG and/or its Affiliates may continue to Sell Licensed Products to such customer through the term of the Wind Down Period and for the remainder of the term of such Continuing Obligation, provided that in no event may DIALOG or its Affiliates Sell Licensed Products to such ...\n\n[Termination For Convenience]: ENERGOUS may, at any time after the third anniversary of the Effective Date, terminate this Agreement with or without cause upon not less than one hundred and eighty (180) days prior written notice to DIALOG.",
+      "relevant_sections": [
+        "Section 2.4",
+        "offset_60578"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Defined term referenced in Post-Termination Services is included",
+        "Termination For Convenience clause content is present"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Termination For Convenience"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. tech/energy / Strategic Alliance."
+    },
+    {
+      "id": "dova_a_01",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: Notwithstanding the above, the sole remedy of Dova for breach of this Section 4.1.2 shall be (i) the adjustment to the promotion fee as set forth in Section 6.1.2 and (ii) the termination right set out in Section 12.2.2.\n\n[Uncapped Liability]: THE FOREGOING SENTENCE SHALL NOT LIMIT (1) THE OBLIGATIONS OF EITHER PARTY TO INDEMNIFY THE OTHER PARTY FROM AND AGAINST THIRD PARTY CLAIMS UNDER SECTION 11.1 OR 11.2, AS APPLICABLE, OR (2) DAMAGES AVAILABLE FOR A PARTY'S BREACH OF THE CONFIDENTIALITY AND NON-USE OBLIGATIONS IN ARTICLE 9.",
+      "relevant_sections": [
+        "4.1.2 N",
+        "offset_136727"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Exception or qualification in Cap On Liability is identified",
+        "Uncapped Liability clause content is present"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "dova_a_02",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: [***], neither Valeant nor its Affiliates shall, directly or indirectly, [***] in the Territory other than the Product; provided that if the Agreement is terminated by Dova pursuant to [***], then any Tail Period shall be immediately terminated if either Valeant or any of its Affiliates, directly or indirectly, [***] in the Territory other than the Product during such Tail Period.\n\n[Competitive Restriction Exception]: Notwithstanding anything to the contrary, in no event shall the restrictions set forth in this Section 2.3.2 apply to [***].",
+      "relevant_sections": [
+        "2.3.1 N",
+        "offset_33477"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present",
+        "Exception or qualification in Competitive Restriction Exception is identified"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "dova_b_01",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: Notwithstanding the foregoing, (a) either Party may, without the other Party's consent, assign this Agreement and its rights and obligations hereunder in whole or in part to an Affiliate; and (b) Dova may assign this Agreement to a successor in interest in connection with the sale or other transfer of all or substantially all of Dova's assets or rights relating to the Product; provided that such assignee shall remain subject to all of the terms and conditions hereof in all respects and shall ass...\n\n[Anti-Assignment]: In the event either Party desires to make such an assignment or other transfer of this Agreement or any rights or obligations hereunder, such Party shall deliver a written notice to the other Party requesting the other Party's written consent in accordance with this Section 13.2, and the other Party shall provide such Party written notice of its determination whether to provide such written consent within [***] following its receipt of such written notice from such Party.",
+      "relevant_sections": [
+        "Section 13.2",
+        "Section 13.2"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Exception or qualification in Change Of Control is identified",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "dova_b_02",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: During the Term, subject to the terms and conditions of this Agreement, Dova hereby grants to Valeant the right, on a co-exclusive basis (solely with Dova and its Affiliates), to Detail and promote the Product in the Specialty in the Territory in the Field, and to conduct the Valeant Activities and the activities of the institutional account management team (pursuant to and subject to the terms of Section 4.1.5) for the Product in the Territory in the Field in accordance with the terms and condi...\n\n[Ip Ownership Assignment]: As between the Parties, Dova shall own all right, title and interest in and to any Product Materials (and all content contained therein) and any Product Labeling (and all content contained therein), including applicable copyrights and trademarks (other than any name, trademark, trade name or logo of Valeant or its Affiliates that may appear on such Product materials or Product Labeling), and to the extent Valeant (or any of its Affiliates) obtains or otherwise has a claim to any of the foregoing...",
+      "relevant_sections": [
+        "2.1 E",
+        "4.4.2 O"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Exception or qualification in License Grant is identified",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "dova_c_01",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: Commencing with the Calendar Quarter commencing on October 1, 2018, as consideration for the Valeant Activities performed by Valeant, Dova shall pay Valeant a promotion fee based on annual Net Sales during the Term, calculated as follows:\n\n(a) For any portion of Net Sales up to and equal [***] in a Calendar Year, an amount equal to [***] of such portion of Net Sales;\n\n(b) For any portion of Net Sales in excess of [***] and up to and equal [***] in a Calendar Year, an amount equal to [***] of suc...\n\n[Minimum Commitment]: If the aggregate actual number of Details for the Product made by the Sales Representatives for a Calendar Quarter is less than the Quarterly Minimum Details for such Calendar Quarter, then in calculating the promotion fee due under Section 6.1.1, the Applicable Percentage for such Calendar Quarter shall be reduced to a new percentage equal to [***].\n\n[Audit Rights]: Dova shall have the right, at its own expense, during normal business hours and upon reasonable prior notice, through a certified public accounting firm or other auditor selected by Dova and reasonably acceptable to Valeant and upon execution of a confidentiality agreement reasonably satisfactory to Valeant in form and substance, to inspect and audit the applicable records and books maintained by Valeant relating to the Valeant Activities for purposes of verifying Valeant's compliance with the t...",
+      "relevant_sections": [
+        "6.1.1 C",
+        "Section 6.1.1",
+        "7.3 D"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Minimum Commitment clause content is present",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "dova_c_02",
+      "contract_file": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Liquidated Damages]: Solely in the event that Dova has terminated this Agreement pursuant to Section 12.3.1 and notwithstanding anything else herein, in consideration of the promotion services performed by Valeant during the Term, with respect to the Tail Period, Dova shall make payments to Valeant in an amount equal to [***] of the amounts that would have been payable by Dova to Valeant with respect to such Tail Period pursuant to Section 6.1 had the Agreement not been so terminated.\n\n[Termination For Convenience]: Either Party shall have the right to terminate this Agreement before the end of the Term for its convenience upon [***] written notice to the other Party (and any such termination shall become effective at the end of such [***]); [***].",
+      "relevant_sections": [
+        "12.5 T",
+        "12.3 O"
+      ],
+      "information_units": [
+        "Liquidated Damages clause content is present",
+        "Exception or qualification in Liquidated Damages is identified",
+        "Termination For Convenience clause content is present"
+      ],
+      "clauses_combined": [
+        "Liquidated Damages",
+        "Termination For Convenience"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Promotion Agreement."
+    },
+    {
+      "id": "berkeley_a_01",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: EXCEPT TO THE EXTENT ARISING (A) FROM A PARTY'S BREACH OF ARTICLE 10 (CONFIDENTIALITY), (B) [***] (E) FROM A PARTY'S FRAUD, GROSS NEGLIGENCE OR WILLFUL MISCONDUCT OR (F) IN CONNECTION WITH A PARTY'S INDEMNIFICATION OBLIGATIONS UNDER ARTICLE 12 (INDEMNIFICATION; INSURANCE), IN NO EVENT WILL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY LOST PROFITS, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES OF ANY KIND ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, HOWEVER CAUSED...\n\n[Uncapped Liability]: EXCEPT TO THE EXTENT ARISING (A) FROM A PARTY'S BREACH OF ARTICLE 10 (CONFIDENTIALITY), (B) [***] (E) FROM A PARTY'S FRAUD, GROSS NEGLIGENCE OR WILLFUL MISCONDUCT OR (F) IN CONNECTION WITH A PARTY'S INDEMNIFICATION OBLIGATIONS UNDER ARTICLE 12 (INDEMNIFICATION; INSURANCE), IN NO EVENT WILL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY LOST PROFITS, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES OF ANY KIND ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, HOWEVER CAUSED...",
+      "relevant_sections": [
+        "11.6 N",
+        "11.6 N"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Exception or qualification in Cap On Liability is identified",
+        "Uncapped Liability clause content is present",
+        "Exception or qualification in Uncapped Liability is identified"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. biotech / Collaboration Agreement."
+    },
+    {
+      "id": "berkeley_a_02",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: During the Term and for a period of [***] ([***]) months following the Term of this Agreement, other than pursuant to Sections 13.3.2 (Effects of Termination Based Upon Ginkgo's Buy-Down Election) or 13.3.3 (Effects of Termination Based Upon an Uncured Ginkgo Breach, Insolvency or Force Majeure Event), BLI shall not, and shall cause its Affiliates not to, directly or indirectly, itself or with or through a Third Party, develop, configure, customize, license, sell, provide or otherwise give acces...\n\n[Competitive Restriction Exception]: Ginkgo under this Agreement (including under Section 6.1 (Headstart Period) and Section 9.1 (Licenses to Ginkgo)), nothing in this Agreement shall otherwise limit, prohibit or preclude BLI from developing, configuring, customizing, licensing, selling or providing the Beacon Platform or Collaboration Workflows for itself or to a Third Party for any uses or otherwise entering into a business or advisory arrangement with any Third Party.",
+      "relevant_sections": [
+        "6.2.1 R",
+        "Section 6.2.1"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. biotech / Collaboration Agreement."
+    },
+    {
+      "id": "berkeley_b_01",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: 9.2.2 after any applicable Headstart Period, with respect to any [***], a [***] license in, to and under any Ginkgo Licensed IP [***] necessary for the performance of, such [***], to make, have made, offer to sell, sell, have sold, import, use, commercialize or perform such [***] to or for Third Parties and to license such Third Parties to do the same.\n\n[Ip Ownership Assignment]: In no event shall Ginkgo, and Ginkgo shall cause its Affiliates to not, file any patent applications covering (or support existing patent applications covering) the [***] and, in the event Ginkgo (or its Affiliates) do file one or more of such patent applications, Ginkgo will and hereby does assign, and shall cause its employees, agents and contractors to assign, to BLI all rights, title and interests in, to and under such patent applications.",
+      "relevant_sections": [
+        "Section 9.2",
+        "8.4 P"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. biotech / Collaboration Agreement."
+    },
+    {
+      "id": "berkeley_c_01",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: In the event that Ginkgo uses any of the BLI Proprietary Workflows identified in Exhibit D to conduct Commercial Services for a Third Party customer and such Commercial Services [***] result in the discovery of an Antibody to be used as the active ingredient in a therapeutic product for which a Third Party [***] (each such Antibody subject to this Section 7.4.2 (Milestone Payments), a \"Discovered Antibody\"), then, on a Discovered Antibody-by-Discovered Antibody basis, in the event such Third Par...\n\n[Minimum Commitment]: With respect to each Contract Year, by no later than [***], Ginkgo shall have incurred (including all credits and offsets permitted under this Agreement) at least, in the aggregate since the beginning of the Term, the Minimum Cumulative Purchase Commitment amount for such Contract Year.\n\n[Audit Rights]: Each Party shall have the right, during normal business hours and upon reasonable notice, to inspect all such records of the other Party, its Affiliates or Permitted Subcontractors.",
+      "relevant_sections": [
+        "7.4.2 M",
+        "offset_108553",
+        "offset_55217"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Exception or qualification in Revenue/Profit Sharing is identified",
+        "Defined term referenced in Revenue/Profit Sharing is included",
+        "Minimum Commitment clause content is present",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. biotech / Collaboration Agreement."
+    },
+    {
+      "id": "berkeley_c_02",
+      "contract_file": "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION AGREEMENT.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: The insurance policies will be under an occurrence form, but if only a claims-made form is available to a Party, then such Party will continue to maintain such insurance after Expiration or the termination of this Agreement for a period of [***] ([***]) years following the end of the Term.\n\n[Liquidated Damages]: ([***]) by the non-hiring Party in the immediately prior calendar year and, further, if the individual solicited and then hired in violation of this is a Key Person under Section 5.4.1(b) (Dedicated FTEs; Key Persons), then BLI shall have [***] ([***]) months to identify an employee as the individual to replace such Key Person and any (a) [***] or (b) [***], in each case (a)-(b), to the extent due to the absence of such Key Person performing a Workflow Development Plan upon which the Key Person ...\n\n[Termination For Convenience]: With respect to Beacon Optofluidic Machines (including related Hardware and Software), Consumables and Services for which Ginkgo has placed a Purchase Order pursuant to this Agreement, the Parties agree to the BLI Terms and Conditions that apply with respect to Beacon Optofluidic Machines (including related Hardware and Software), Consumables and Services, unless, notwithstanding anything to the contrary set forth in the BLI Terms and Conditions (including any language regarding the treatment of...",
+      "relevant_sections": [
+        "Section 12.4",
+        "Section 14.4",
+        "3.9 E"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Liquidated Damages clause content is present",
+        "Termination For Convenience clause content is present",
+        "Exception or qualification in Termination For Convenience is identified"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Liquidated Damages",
+        "Termination For Convenience"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. biotech / Collaboration Agreement."
+    },
+    {
+      "id": "digitalcinema_a_01",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: The obligations under this Section 10.3 state the  entire liability of NCM and are Network Affiliate's sole and exclusive remedies, with respect to intellectual property infringement.\n\n[Uncapped Liability]: EXCEPT IN CONNECTION WITH A BREACH OF ARTICLE XIV HEREUNDER, AND WITH THE EXCEPTION OF THE  INDEMNIFICATION OBLIGATIONS OF THE PARTIES UNDER ARTICLE X, THE AGGREGATE TOTAL LIABILITY OF EITHER PARTY TO  THE OTHER PARTY AND TO ALL OTHER PERSONS AND ENTITIES UNDER THIS AGREEMENT SHALL UNDER NO CIRCUMSTANCES  EXCEED THE AMOUNT OF THE NET REVENUE RECEIVED BY NCM PURSUANT TO SECTION 7.2 OF THIS AGREEMENT DURING THE FIVE  (5) YEAR PERIOD PRECEDING SUCH LIABILITY, LESS IN ANY CASE THE AGGREGATE OF ANY A...",
+      "relevant_sections": [
+        "offset_77564",
+        "offset_80166"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Uncapped Liability clause content is present",
+        "Exception or qualification in Uncapped Liability is identified"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. entertainment / Affiliate Agreement."
+    },
+    {
+      "id": "digitalcinema_a_02",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: During the Term, except as otherwise provided in this Agreement, Network Affiliate and its affiliates agree not to engage or  participate in any business, hold equity interests, directly or indirectly, in another entity, whether currently existing or hereafter created, or  participate in any other joint venture that competes or would compete with any business that NCM is authorized to conduct in the Territory  pursuant to this Agreement, whether or not NCM is actually conducting such business in...\n\n[Competitive Restriction Exception]: The foregoing  restrictions shall not apply (i) in the event Network Affiliate or its affiliate acquires a competing business as an incidental part of an acquisition of  any other business that is not prohibited by the foregoing, if Network Affiliate disposes of the portion of such business that is a competing  business as soon as commercially reasonable, (ii) to any direct or indirect ownership or other equity investments by Network Affiliate or its  affiliates in such other competing business ...",
+      "relevant_sections": [
+        "11.3 N",
+        "offset_82600"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Exception or qualification in Non-Compete is identified",
+        "Competitive Restriction Exception clause content is present"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. entertainment / Affiliate Agreement."
+    },
+    {
+      "id": "digitalcinema_b_01",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: Network Affiliate may not assign or transfer, by operation of law or otherwise, any of its rights under this  Agreement or delegate any of its duties under this Agreement to any third party without NCM's prior written consent, which consent shall not be  unreasonably withheld, conditioned or delayed\n\n[Anti-Assignment]: Any attempted  assignment in violation of this section shall be void.",
+      "relevant_sections": [
+        "14.8 A",
+        "offset_101607"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. entertainment / Affiliate Agreement."
+    },
+    {
+      "id": "digitalcinema_b_02",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: Subject to the terms and conditions of this Agreement and such other standards, trademark usage guidelines and  specifications as are prescribed by NCM during the term of this Agreement (the \"NCM Quality Standards\"), NCM hereby grants to Network  Affiliate, and Network Affiliate hereby accepts, a non-exclusive, non-transferable (except in connection with an assignment of this Agreement in  accordance with Section 14.8 hereof), non-sublicenseable, limited license (i) to use the NCM Marks solely i...\n\n[Ip Ownership Assignment]: Any and all data, information, and material created, conceived, reduced to practice, or developed by or on  behalf of either Party, whether alone, in connection with the other Party or any third party, including, without limitation, written works, processes,  methods, inventions, discoveries, software, works of visual art, audio works, look-and-feel attributes, and multimedia works, based on, using, or  derived from, in whole or in part, any NCM Property, whether or not done on NCM's facilities,...",
+      "relevant_sections": [
+        "5.3 L",
+        "12.2 D"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Exception or qualification in License Grant is identified",
+        "Defined term referenced in License Grant is included",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. entertainment / Affiliate Agreement."
+    },
+    {
+      "id": "digitalcinema_c_01",
+      "contract_file": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: Each Party shall receive 50% of all Net Revenue derived from the sale of advertising Inventory that is  exhibited in the Theatres (the \"Advertising Revenue Share\").\n\n[Minimum Commitment]: Any payments made in order to satisfy the \"Minimum Fee\" which can be  characterized as an advance of amounts due from advertising clients which is \"earned but not yet paid\" shall be deducted from the following  year's payments when such amounts have in fact been collected.\n\n[Audit Rights]: Any audit with respect to  amounts payable by either party to the other party under this Agreement shall be limited to an audit with respect to amounts to be paid in the  current calendar year and immediately preceding calendar year only.",
+      "relevant_sections": [
+        "7.1 A",
+        "Section 3.4",
+        "offset_63576"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Specific numeric terms in Revenue/Profit Sharing are stated",
+        "Defined term referenced in Revenue/Profit Sharing is included",
+        "Minimum Commitment clause content is present",
+        "Defined term referenced in Minimum Commitment is included",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. entertainment / Affiliate Agreement."
+    },
+    {
+      "id": "jointcorp_a_01",
+      "contract_file": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: Except with respect to your obligations to indemnify us and claims that we may bring under Sections 7, 9, 15, or 16 of this Agreement, and except for claims arising from your non-payment or underpayment of any amounts owed to us or our affiliates, (1) any and all claims arising out of or related to this Agreement or the relationship between you and us shall be barred, by express agreement of the parties, unless an action or proceeding is commenced within two (2) years from the date the cause of ...\n\n[Uncapped Liability]: Except with respect to your obligations to indemnify us and claims that we may bring under Sections 7, 9, 15, or 16 of this Agreement, and except for claims arising from your non-payment or underpayment of any amounts owed to us or our affiliates, (1) any and all claims arising out of or related to this Agreement or the relationship between you and us shall be barred, by express agreement of the parties, unless an action or proceeding is commenced within two (2) years from the date the cause of ...",
+      "relevant_sections": [
+        "17.10 W",
+        "17.10 W"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Exception or qualification in Cap On Liability is identified",
+        "Uncapped Liability clause content is present",
+        "Exception or qualification in Uncapped Liability is identified"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. retail/franchise / Franchise Agreement."
+    },
+    {
+      "id": "jointcorp_a_02",
+      "contract_file": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: Therefore, during the term of this Agreement, neither you, nor any Principal Owner, nor any member of your immediate family or of the immediate family of any Principal Owner, shall perform services for, or have any direct or indirect interest as a disclosed or beneficial owner, investor, partner, director, officer, employee, manager, consultant, representative, or agent in, any business that offers products or services the same as or similar to those offered or sold at The Joint Corp. Location f...\n\n[Competitive Restriction Exception]: The ownership of one percent (1%) or less of a publicly traded company will not be deemed to be prohibited by this Paragraph",
+      "relevant_sections": [
+        "9.3 N",
+        "offset_66170"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present",
+        "Specific numeric terms in Competitive Restriction Exception are stated"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. retail/franchise / Franchise Agreement."
+    },
+    {
+      "id": "jointcorp_b_01",
+      "contract_file": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: Accordingly, neither this Agreement nor any part of your interest in it, nor any Interest (as defined in Paragraph 14.2) of Franchise Owner or a Principal Owner, may be transferred (see definition below) without our advance written approval if such transfer will result in the Principal Owner(s) set forth in Exhibit 4 holding less than a seventy-five percent (75%) Interest in Franchise Owner.\n\n[Anti-Assignment]: If you propose to Transfer this Agreement, the Franchise or its assets, or any Interest, or if any of your Principal Owners proposes to Transfer a controlling Interest in you or make a Transfer that is one of a series of Transfers which taken together would constitute the Transfer of a controlling Interest in you, then all of the following conditions must be met before or at the time of the Transfer:   (a) the Proposed New Owner must have sufficient business experience, aptitude, and financial r...",
+      "relevant_sections": [
+        "14.4 N",
+        "Section 14"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Specific numeric terms in Change Of Control are stated",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. retail/franchise / Franchise Agreement."
+    },
+    {
+      "id": "jointcorp_c_01",
+      "contract_file": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: As of the date of this Agreement, the current required contribution to the Ad Fund is one percent (1%) of the gross revenues of the Franchise.\n\n[Minimum Commitment]: Minimum individual and aggregate Principal Owner ownership percentage required at all times during the term of this Agreement:   4-2.1 During the term of this Agreement, the Principal Owners together must have a \"controlling interest\" of no less than seventy-five percent (75%) of the equity, voting control and profits in the Franchise Owner.   4-2.2 Unless otherwise permitted, the required minimum \"ownership interest\" of each Principal Owner during the term of this Agreement is:\n\nName   Ownershi...\n\n[Audit Rights]: We have the right to inspect the proposed supplier's facilities, and require that product samples from the proposed supplier be delivered, at our option, either directly to us, or to any independent, certified laboratory that we may designate, for testing.",
+      "relevant_sections": [
+        "offset_44366",
+        "offset_166595",
+        "offset_75218"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Specific numeric terms in Revenue/Profit Sharing are stated",
+        "Minimum Commitment clause content is present",
+        "Specific numeric terms in Minimum Commitment are stated",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. retail/franchise / Franchise Agreement."
+    },
+    {
+      "id": "jointcorp_c_02",
+      "contract_file": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE AGREEMENT.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: Upon the expiration or termination of either the Lease Agreement or the Franchise Agreement (attached), Lessor will cooperate with and assist Franchisor in securing possession of the Premises and if Franchisor does not elect to take an assignment of the Lessee's interest, Lessor will allow Franchisor to enter the Premises, without being guilty of trespass and without incurring any liability to Lessor, to remove all signs, awnings, and all other items identifying the Premises as a Franchised Busi...\n\n[Liquidated Damages]: In the event that you use, sell or distribute unauthorized products or services, and do not cease the use, sale, or distribution of unauthorized services or products within ten (10) days after written notice is given to you, we reserve the right to terminate this agreement and/or charge you a fee of One Hundred and No/100 Dollars ($100.00) for each day that you fail to comply with our demand to cease the use, sale or distribution of unauthorized products or services, which is a reasonable estima...\n\n[Termination For Convenience]: We will have the right to terminate the Ad Fund by giving you thirty (30) days' advance written notice.",
+      "relevant_sections": [
+        "offset_159784",
+        "offset_71246",
+        "offset_93553"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Liquidated Damages clause content is present",
+        "Specific numeric terms in Liquidated Damages are stated",
+        "Termination For Convenience clause content is present"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Liquidated Damages",
+        "Termination For Convenience"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. retail/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_a_01",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "What are the liability limitations in this agreement, and are there any exceptions or carve-outs to those limitations?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: You acknowledge that we will have no liability to you or any regulatory authority for any failure by you to obtain or maintain during the term of this Agreement any necessary licenses or approvals required for the operation of the Franchised Business.\n\n[Competitive Restriction Exception]: corporation.",
+      "relevant_sections": [
+        "offset_58148",
+        "Section 19.3.3"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Competitive Restriction Exception clause content is present"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_a_02",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: 19.3.1 Divert or attempt to divert any actual or potential business or customer of any Goosehead Business to any competitor or otherwise take any action injurious or prejudicial to the goodwill associated with the Marks and the System.\n\n[Competitive Restriction Exception]: corporation.",
+      "relevant_sections": [
+        "Section 16",
+        "Section 19.3.3"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_b_01",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: You represent and warrant to us, and agree, that your owners are accurately set forth on Exhibit C to this Agreement, and you also agree not to permit the identity of those owners, or their respective interests in you, to change without complying with this Agreement.\n\n[Anti-Assignment]: You further covenant and agree that, for a continuous period of two (2) years after (1) the expiration of this Agreement, (2) the non-renewal of this Agreement, (3) the termination of this Agreement, and/or (4) a transfer as contemplated in Section 16 above: 19.5.1 you will not directly or indirectly, for yourself, or through, on behalf of, or in conjunction with any person, firm, partnership, corporation, or other entity, sell, assign, lease, and/or transfer the Approved Location to any person,...",
+      "relevant_sections": [
+        "16.2 Y",
+        "19.5 P"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_b_02",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: In order to operate your Franchised Business under this Agreement, we hereby license use of such data back to you, at no additional cost, solely for the term of this Agreement and for your use in connection with operating the Franchised Business.\n\n[Ip Ownership Assignment]: us.",
+      "relevant_sections": [
+        "14.2.2 Y",
+        "2.2.6 Y"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_c_01",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: We will receive all Commissions (defined below) from insurance carriers.\n\n[Minimum Commitment]: written approval for the Operating Principal to hold a smaller interest.\n\n[Audit Rights]: You agree to provide us, at your expense, and in a format that we reasonably specify, a complete set of annual financial statements prepared on a review basis by an independent certified public accountant (as to whom we do not have a reasonable objection) within ninety (90) days after the end of each fiscal year of the Franchised Business during the term of this Agreement.",
+      "relevant_sections": [
+        "4.2 R",
+        "6.1.1 I",
+        "12.2 F"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Minimum Commitment clause content is present",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "goosehead_c_02",
+      "contract_file": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise Agreement.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: You agree to take such action as may be necessary to cancel any assumed name or equivalent registration which contains the mark \"Goosehead Insurance\"\n\nPage 46 of 80\n\n\n\n\n\nand any and all other Proprietary Marks, and/or any other service mark or trademark of ours, and you will give us evidence that we deem satisfactory to provide that you have complied with this obligation within five (5) days after termination or expiration of this Agreement.\n\n[Liquidated Damages]: If we terminate this Agreement based on your default, or if you abandon or otherwise cease to operate the Franchised Business, in addition to all other amounts due to us under this Agreement, you agree to pay to us, as liquidated damages, an amount calculated as follows: (a) the average of your monthly Royalty Fees that are due under this Agreement for the twelve (12) months immediately before your abandonment or our delivery of the notice of default (or, if you have been operating for less than...",
+      "relevant_sections": [
+        "18.3 C",
+        "18.11 L"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Defined term referenced in Post-Termination Services is included",
+        "Liquidated Damages clause content is present"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Liquidated Damages"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. insurance/franchise / Franchise Agreement."
+    },
+    {
+      "id": "revmed_a_01",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "Is liability capped or uncapped under this agreement? What are the specific limitations, and are there any exceptions where liability remains uncapped?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL, PUNITIVE, OR INDIRECT DAMAGES OR LOST PROFITS ARISING FROM OR RELATING TO ANY BREACH OF THIS AGREEMENT, REGARDLESS OF ANY NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.\n\n[Uncapped Liability]: NOTHING IN THIS SECTION 14.5 IS INTENDED TO OR SHALL LIMIT OR RESTRICT THE INDEMNIFICATION RIGHTS OR OBLIGATIONS OF ANY PARTY UNDER SECTION 14.1 OR SECTION 14.2, OR DAMAGES AVAILABLE FOR A PARTY'S BREACH OF ITS OBLIGATIONS RELATING TO CONFIDENTIALITY UNDER ARTICLE XI OR INTELLECTUAL PROPERTY UNDER ARTICLE X.",
+      "relevant_sections": [
+        "14.5 L",
+        "14.5 L"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Uncapped Liability clause content is present"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Uncapped Liability"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "revmed_b_01",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: RevMed shall pay Sanofi such royalties until the earlier of (x) expiration of the Post-Termination Royalty Term therefor and (y) a Change of Control of Sanofi.\n\n[Anti-Assignment]: all research and development assets and operations of the Acquired Party Family, in each case relating to SHP2 Inhibitors and Products, remain with the Acquired Party Family and are not licensed or otherwise transferred to the Acquiror Party Family for any purpose; (C) the scientific and Development activities with respect to SHP2 Inhibitors and Products of the Acquired Party Family and Competing Products of the Acquiror Family (if any) are maintained separate and distinct, and (D) there is no e...",
+      "relevant_sections": [
+        "offset_195850",
+        "Section 15.2"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "revmed_b_02",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: Subject to the terms and conditions of this Agreement, Sanofi hereby grants to RevMed a non-exclusive, royalty-free sublicense (which shall only be further sub-licensable (a) to RevMed's Subsidiaries, (b) to the Permitted Contractors or Researchers, and (c) solely with Sanofi's prior written consent, such consent not to be unreasonably withheld, delayed or conditioned, to Third Parties who are not Permitted Contractors or Researchers) under the rights exclusively licensed to Sanofi pursuant to S...\n\n[Ip Ownership Assignment]: Once RevMed has completed conducting all Clinical Trials for a Product assigned to it under the Development Plan for such Product, RevMed agrees to assign, and hereby does assign, to Sanofi all of its rights, title and interests in and to all Regulatory Approvals (including INDs and NDAs) for such Product.",
+      "relevant_sections": [
+        "3.2 L",
+        "6.2 R"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Exception or qualification in License Grant is identified",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "revmed_c_01",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: No later than the Initiation of the first Registrational Clinical Trial for the first Product, Sanofi and RevMed shall enter into a profit/loss share agreement (the \"Profit/Loss Share Agreement\") pursuant to which the Parties shall equally share the Net Profit and Net Loss (as defined in Exhibit M of the Correspondence) applicable with respect to Commercialization of Products (but, for clarity, not any costs of Development) of Products in the U.S.\n\n[Audit Rights]: The auditing Party shall bear the full cost of such audit unless such audit reveals an underpayment by the audited Party that resulted from a discrepancy in the financial report provided by the audited Party for the audited period, which underpayment was more than [***] percent of the amount set forth in such report, in which case the audited Party shall reimburse the auditing Party for the costs for such audit.",
+      "relevant_sections": [
+        "9.4 U",
+        "Section 15.6"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Defined term referenced in Revenue/Profit Sharing is included",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "revmed_c_02",
+      "contract_file": "RevolutionMedicinesInc_20200117_S-1_EX-10.1_11948417_EX-10.1_Development Agreement.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: Within [***] after the effective date of such termination for Termination Products for which Regulatory Approval has been obtained prior to the effective date of such termination or [***] for other Termination Products (or as promptly as practical thereafter, if such period is not practical under Applicable Law), Sanofi shall transfer and assign to RevMed all Regulatory Approvals relating to such Termination Products, and, to the extent not previously provided to RevMed, transfer other Regulator...\n\n[Termination For Convenience]: Sanofi may terminate this Agreement (A) in its entirety by providing [***] written notice of termination to RevMed or (B) on a country-by-country or Product-by-Product basis by providing [***] written notice of termination to RevMed; provided that if Sanofi desires to terminate this Agreement under this Section 12.2(a)(i)B only with respect to the U.S. (for all Products or one or more Products), Sanofi shall provide [***] written notice of termination to RevMed.",
+      "relevant_sections": [
+        "Article XII",
+        "12.2 T"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Termination For Convenience clause content is present"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Termination For Convenience"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_a_01",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What are the liability limitations in this agreement, and are there any exceptions or carve-outs to those limitations?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Cap On Liability]: THE PARTIES AGREE THAT THE LIMITATIONS SPECIFIED IN THIS SECTION 15.11 WILL APPLY EVEN IF ANY LIMITED REMEDY SPECIFIED IN THIS AGREEMENT IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, \"CONSEQUENTIAL DAMAGES\" WILL BE DEEMED TO INCLUDE, AND NEITHER PARTY WILL BE LIABLE TO THE OTHER PARTY OR ANY OF SUCH OTHER PARTY'S AFFILIATES, REPRESENTATIVES OR STOCKHOLDERS FOR ANY DAMAGES BASED ON OR MEASURED BY LOSS OF PROJECTED OR SPECULATIVE FUTURE SALES O...\n\n[Competitive Restriction Exception]: Notwithstanding any of the foregoing, without the consent of PB, which consent may be withheld in PB's sole discretion, SFJ shall not sell, assign, sublicense or otherwise transfer this Agreement to an entity whose primary business is the development or commercialization of pharmaceutical or biotechnology products prior to the date of Program Transfer. For the avoidance of doubt the preceding sentence shall not apply after the date of Program Transfer.",
+      "relevant_sections": [
+        "offset_284411",
+        "offset_273113"
+      ],
+      "information_units": [
+        "Cap On Liability clause content is present",
+        "Defined term referenced in Cap On Liability is included",
+        "Competitive Restriction Exception clause content is present",
+        "Exception or qualification in Competitive Restriction Exception is identified"
+      ],
+      "clauses_combined": [
+        "Cap On Liability",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_a_02",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What competitive restrictions apply to the parties under this agreement, and what are the specific exceptions or carve-outs to those restrictions?",
+      "trap_type": "trap_a",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Non-Compete]: During the applicable Exclusive Period, SFJ shall not, and shall cause its Affiliates not to, either by itself or through a Third Party, conduct human clinical trials of, or sell, offer for sale or have sold:\n\n3.19.1 any Competing Product (other than Product) alone or in combination (whether fixed dose or co-packaged) with one (1) or more other active ingredients;\n\n3.19.2 any combination (whether fixed dose or co-packaged) with one (1) or more other active ingredients of the Product and a Compet...\n\n[Competitive Restriction Exception]: Notwithstanding any of the foregoing, without the consent of PB, which consent may be withheld in PB's sole discretion, SFJ shall not sell, assign, sublicense or otherwise transfer this Agreement to an entity whose primary business is the development or commercialization of pharmaceutical or biotechnology products prior to the date of Program Transfer. For the avoidance of doubt the preceding sentence shall not apply after the date of Program Transfer.",
+      "relevant_sections": [
+        "3.19 E",
+        "offset_273113"
+      ],
+      "information_units": [
+        "Non-Compete clause content is present",
+        "Competitive Restriction Exception clause content is present",
+        "Exception or qualification in Competitive Restriction Exception is identified"
+      ],
+      "clauses_combined": [
+        "Non-Compete",
+        "Competitive Restriction Exception"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_b_01",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What happens in the event of a Change of Control, and what are the restrictions on assigning this agreement to third parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Change Of Control]: Within one hundred and twenty (120) days following the closing of a Change of Control, PB or its successor shall have the right to make a one-time payment (the \"Change of Control Buy-Out Payment\") in lieu of all (but not less than all) remaining Approval Payments for the applicable country(ies) in which Regulatory Approval has been received as of the date of closing of such Change of Control, provided that SFJ has not previously assigned the right to receive the Approval Payments to a Third Part...\n\n[Anti-Assignment]: PB shall not sell, transfer or assign, directly or indirectly, in whole or in part, any rights to receive payments of royalties or license fees with respect to the Product or the PB Intellectual Property (including any Accounts with respect to such royalties or license fees), other than to a wholly owned direct or indirect subsidiary of PB (it being understood that the foregoing shall not restrict the creation of any Permitted Lien).",
+      "relevant_sections": [
+        "6.7.2 C",
+        "7.5.6 S"
+      ],
+      "information_units": [
+        "Change Of Control clause content is present",
+        "Defined term referenced in Change Of Control is included",
+        "Anti-Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "Change Of Control",
+        "Anti-Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_b_02",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What licenses are granted under this agreement, and how is intellectual property ownership allocated between the parties?",
+      "trap_type": "trap_b",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[License Grant]: In the case of any individual consultant of SFJ or its Affiliates (excluding SFJ's and its Affiliates' Permitted Third Parties), if SFJ is unable to cause such consultant to agree to such assignment obligation despite SFJ's using commercially reasonable efforts to negotiate such assignment obligation, then SFJ shall either: (A) cause such consultant to grant an exclusive, worldwide, royalty-free, fully-paid, freely-assignable license, with the right to sublicense through multiple tiers, under th...\n\n[Ip Ownership Assignment]: In consideration of the Approval Payments to be made under this Agreement (if and to the extent applicable), and in further consideration of the payment by PB to SFJ of [***], SFJ shall sell and transfer to PB, and PB shall acquire from SFJ, the sole and exclusive ownership, even as to SFJ, of the Trial Data Package including all Research Results as set forth below in this Section 11.1.1.4.",
+      "relevant_sections": [
+        "Section 11.1.1.3",
+        "11.1.1.4 T"
+      ],
+      "information_units": [
+        "License Grant clause content is present",
+        "Ip Ownership Assignment clause content is present"
+      ],
+      "clauses_combined": [
+        "License Grant",
+        "Ip Ownership Assignment"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_c_01",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "List all financial obligations and payment-related provisions in this agreement, including any revenue sharing, minimum commitments, and audit rights.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Revenue/Profit Sharing]: PB shall issue to SFJ on the Effective Date a warrant (\"Warrant\") exercisable for two million two hundred thousand (2,200,000) shares of PB common stock (\"Stock\") at an exercise price per share (\"Exercise Price\") equal to the greater of (a) five dollars ($5.00) or (b) 120% of the volume weighted average closing price of the Stock over the thirty (30) consecutive trading days ending on the last trading day immediately preceding the Effective Date and exercisable as follows: (i) one million one hu...\n\n[Minimum Commitment]: In connection with the Development, manufacture and Commercialization of the Product and fulfillment of PB's obligations hereunder, PB shall spend at least an amount equal to the amount of funding paid by SFJ to PB pursuant to this Section 4.2.\n\n[Audit Rights]: At least [***] during the Term, upon SFJ's request, Executive Officers of PB shall meet with Executive Officers of SFJ to review and discuss PB's financial condition and operations. [***].",
+      "relevant_sections": [
+        "8.1 W",
+        "Section 4.2.4",
+        "offset_107762"
+      ],
+      "information_units": [
+        "Revenue/Profit Sharing clause content is present",
+        "Specific numeric terms in Revenue/Profit Sharing are stated",
+        "Defined term referenced in Revenue/Profit Sharing is included",
+        "Minimum Commitment clause content is present",
+        "Audit Rights clause content is present"
+      ],
+      "clauses_combined": [
+        "Revenue/Profit Sharing",
+        "Minimum Commitment",
+        "Audit Rights"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    },
+    {
+      "id": "phasebio_c_02",
+      "contract_file": "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+      "query": "What happens after this agreement terminates? Describe all post-termination obligations, any termination fees or liquidated damages, and the conditions for termination for convenience.",
+      "trap_type": "trap_c",
+      "difficulty": "multi_hop",
+      "ground_truth_answer": "[Post-Termination Services]: mutually agreeing to terminate the Phase 3 Trial, in either case ((x) or (y)), due to a Serious Safety Issue that was previously known, demonstrated or identified by PB as being material as of the Effective Date and the material data showing, demonstrating, or identifying such Serious Safety Issue were not included in the Data Room, disclosed in writing to SFJ or otherwise publicly known prior to the Effective Date; then, in either case ((i) or (ii)), PB will pay SFJ within [***] of the date of ...\n\n[Liquidated Damages]: In the event that SFJ terminates this Agreement pursuant to this Section 14.2.1 then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ prior to such termination.",
+      "relevant_sections": [
+        "Section 14.2.7",
+        "offset_240956"
+      ],
+      "information_units": [
+        "Post-Termination Services clause content is present",
+        "Liquidated Damages clause content is present",
+        "Specific numeric terms in Liquidated Damages are stated"
+      ],
+      "clauses_combined": [
+        "Post-Termination Services",
+        "Liquidated Damages"
+      ],
+      "notes": "Auto-generated from CUADv1.json annotations. pharma / Development Agreement."
+    }
+  ]
+}
